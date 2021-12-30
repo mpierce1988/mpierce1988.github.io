@@ -13,16 +13,25 @@
     <title>Michael Pierce's Github</title>
 
     <style>
+        :root {
+            --primary-color-dark: #1B22CC;
+            --primary-color: #107BCC;
+            --primary-color-muted: #D4F1F4;
+            --first-compliment-color: #CC5A25;
+            --second-compliment-color: #CCAB25;
+            --neighbor-color: #06CCB8;
+            
+        }
         body {
-            background-color: #D4F1F4;
+            background-color: var(--primary-color);
         }
         .btn-primary {
-            background-color: #189AB4;
-            border-color: #75E6DA;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color-muted);
         }
 
         a.btn-primary:hover {
-            background-color: #05445E;
+            background-color: var(--primary-color-dark);
         }
 
         .bi-code-slash {
@@ -30,11 +39,12 @@
         }
 
         a.dropdown-item:hover {
-            background-color: #07BDE3;
-            color: #fff;
+            background-color: var(--neighbor-color);
+            color: #000;
         }
         a.dropdown-item:active {
-            background-color: #05445E;
+            background-color: var(--primary-color-dark);
+            color:#fff;
         }
         /*
         #about {
@@ -42,6 +52,11 @@
             border-radius: 15px;
         }
         */
+
+        .project-border {
+            
+            border: .25em solid var(--second-compliment-color);
+        }
 
         .text-color-first-compliment {
             color: #CC5A25;
@@ -62,7 +77,7 @@
 
 </head>
 
-<body>
+<body class="bg-gradient">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-light bg-gradient">
         <div class="container-md">
@@ -113,7 +128,7 @@
     <!-- Intro -->
     <div class="container-md text-center" id="intro">
         <h1 class="display-1">Hello, <span class="text-color-first-compliment">world</span>!</h1>
-        <p class="lead text-muted">Welcome to my portfolio!</p>
+        <p class="lead text-white">Welcome to my portfolio!</p>
         <div class="row justify-content-center my-5">
             <div class="col-md-8">
                 <picture>
@@ -137,11 +152,11 @@
                     quis totam possimus nihil ipsum illum dolorum doloribus. Architecto similique nostrum, iure vero ad
                     nam omnis quod!</p>
                 <ul class="list-group">
-                    <li class="list-group-item">An Item</li>
-                    <li class="list-group-item">A Second Item</li>
-                    <li class="list-group-item">A Third Item</li>
-                    <li class="list-group-item">A Fourth Item</li>
-                    <li class="list-group-item">A Fifth Item</li>
+                    <li class="list-group-item list-group-item-primary">An Item</li>
+                    <li class="list-group-item list-group-item-secondary">A Second Item</li>
+                    <li class="list-group-item list-group-item-success">A Third Item</li>
+                    <li class="list-group-item list-group-item-secondary">A Fourth Item</li>
+                    <li class="list-group-item list-group-item-secondary">A Fifth Item</li>
                 </ul>
             </div>
             <div class="col-md-8 d-none d-md-block">
@@ -157,11 +172,11 @@
     <!-- Projects -->
     <div class="container-md text-center my-5" id="projects">
         <h2 class="display-3">Projects</h2>
-        <p class="lead text-muted">Some of my latest work...</p>
+        <p class="lead text-white">Some of my latest work...</p>
 
         <div class="row my-5 justify-content-evenly">
             <div class="col-lg-6 col-xxl-4 my-5">
-                <div class="card h-100">
+                <div class="card h-100 project-border shadow">
                     <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
                         <picture>
                             <source src="images/galaxy_md.jpg" media="(min-width:75em)">
@@ -190,7 +205,7 @@
             </div>
 
             <div class="col-lg-6 col-xxl-4 my-5">
-                <div class="card h-100">
+                <div class="card h-100 project-border shadow">
                     <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
                         <picture>
                             <source src="images/pool_md.jpg" media="(min-width:75em)">
@@ -219,7 +234,7 @@
             </div>
 
             <div class="col-lg-6 col-xxl-4 my-5">
-                <div class="card h-100">
+                <div class="card h-100 project-border shadow">
                     <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
                         <picture>
                             <source src="images/pool_md.jpg" media="(min-width:75em)">
