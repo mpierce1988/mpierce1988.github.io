@@ -7,11 +7,11 @@
     --neighbor-color: #06CCB8;
 
 }
-/*
+
 #top {
     background-color: var(--primary-color);
 }
-*/
+
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color-muted);
