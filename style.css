@@ -1,0 +1,97 @@
+:root {
+    --primary-color-dark: #1B22CC;
+    --primary-color: #107BCC;
+    --primary-color-muted: #D4F1F4;
+    --first-compliment-color: #CC5A25;
+    --second-compliment-color: #CCAB25;
+    --neighbor-color: #06CCB8;
+
+}
+
+#top {
+    background-color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color-muted);
+}
+
+a.btn-primary:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.bi-code-slash {
+    color: #107BCC;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.dropdown-item:hover {
+    background-color: var(--neighbor-color);
+    color: #000;
+}
+
+a.dropdown-item:active {
+    background-color: var(--primary-color-dark);
+    color: #fff;
+}
+
+/*
+#about {
+    border: .15em solid black;
+    border-radius: 15px;
+}
+*/
+
+.project-border {
+
+    border: .25em solid var(--second-compliment-color);
+}
+
+.social-card {
+    background-color: var(--first-compliment-color);
+}
+
+.text-color-first-compliment {
+    color: #CC5A25;
+}
+
+.text-color-second-compliment {
+    color: #CCAB25;
+}
+
+.text-color-first-neighbor {
+    color: #1B22CC;
+}
+
+.text-color-second-neighbor {
+    color: #06CCB8;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#pool-image {            
+    background-image: url("images/pool_sm.jpg");           
+}
+
+#galaxy-image {
+    background-image: url("images/galaxy_sm.jpg");
+}
+
+@media only screen and (min-width: 48rem){
+    #pool-image {
+        background-image: url("images/pool_md.jpg");
+    }
+
+    #galaxy-image {
+        background-image: url("images/galaxy_md.jpg");
+    }
+}

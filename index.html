@@ -9,92 +9,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="style.css">
     <title>Michael Pierce's Github</title>
-
-    <style>
-        :root {
-            --primary-color-dark: #1B22CC;
-            --primary-color: #107BCC;
-            --primary-color-muted: #D4F1F4;
-            --first-compliment-color: #CC5A25;
-            --second-compliment-color: #CCAB25;
-            --neighbor-color: #06CCB8;
-
-        }
-
-        body {
-            background-color: var(--primary-color);
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color-muted);
-        }
-
-        a.btn-primary:hover {
-            background-color: var(--primary-color-dark);
-        }
-
-        .bi-code-slash {
-            color: #107BCC;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a.dropdown-item:hover {
-            background-color: var(--neighbor-color);
-            color: #000;
-        }
-
-        a.dropdown-item:active {
-            background-color: var(--primary-color-dark);
-            color: #fff;
-        }
-
-        /*
-        #about {
-            border: .15em solid black;
-            border-radius: 15px;
-        }
-        */
-
-        .project-border {
-
-            border: .25em solid var(--second-compliment-color);
-        }
-
-        .social-card {
-            background-color: var(--first-compliment-color);
-        }
-
-        .text-color-first-compliment {
-            color: #CC5A25;
-        }
-
-        .text-color-second-compliment {
-            color: #CCAB25;
-        }
-
-        .text-color-first-neighbor {
-            color: #1B22CC;
-        }
-
-        .text-color-second-neighbor {
-            color: #06CCB8;
-        }
-    </style>
 
 </head>
 
-<body class="bg-gradient" style="position:relative" data-bs-spy="scroll" data-bs-target="#navbar-top">
+<body id="top" class="bg-gradient" style="position:relative" data-bs-spy="scroll" data-bs-target="#navbar-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-light bg-gradient mb-5 sticky-top" id="navbar-top">
         <div class="container-md">
             <div class="navbar-brand">
-                <a href="#intro">
+                <a href="#top">
                     <i class="bi bi-code-slash"></i>
                 </a>
 
@@ -127,7 +52,7 @@
     </nav>
 
     <!-- Intro -->
-    <div class="container-md text-center" id="intro">
+    <div class="container-md text-center">
         <h1 class="display-1 mt-5">Hello, <span class="text-color-first-compliment">world</span>!</h1>
         <p class="lead text-white">Welcome to my portfolio!</p>
         <div class="row justify-content-center my-5">
@@ -183,10 +108,7 @@
             <div class="col-lg-6 col-xxl-4 my-5">
                 <div class="card h-100 project-border shadow">
                     <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
-                        <picture>
-                            <source src="images/galaxy_md.jpg" media="(min-width:75em)">
-                            <img src="images/galaxy_sm.jpg" alt="Galaxy" class="card-img-top w-100 h-auto">
-                        </picture>
+                        <div class="project-image" id="galaxy-image"></div>                        
                     </div>
                     <div class="card-body">
                         <h5 class="card-title display-5">2D Space Shooter</h5>
@@ -212,10 +134,7 @@
             <div class="col-lg-6 col-xxl-4 my-5">
                 <div class="card h-100 project-border shadow">
                     <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
-                        <picture>
-                            <source src="images/pool_md.jpg" media="(min-width:75em)">
-                            <img src="images/pool_sm.jpg" alt="Galaxy" class="card-img-top w-100 h-auto">
-                        </picture>
+                        <div class="project-image" id="pool-image"></div>                         
                     </div>
                     <div class="card-body">
                         <h5 class="card-title display-5">Pool System</h5>
@@ -241,10 +160,7 @@
             <div class="col-lg-6 col-xxl-4 my-5">
                 <div class="card h-100 project-border shadow">
                     <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
-                        <picture>
-                            <source src="images/pool_md.jpg" media="(min-width:75em)">
-                            <img src="images/pool_sm.jpg" alt="Galaxy" class="card-img-top w-100 h-auto">
-                        </picture>
+                        <div class="project-image" id="pool-image"></div>                        
                     </div>
                     <div class="card-body">
                         <h5 class="card-title display-5">Pool System</h5>
