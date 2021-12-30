@@ -12,27 +12,90 @@
 
     <title>Michael Pierce's Github</title>
 
+    <style>
+        :root {
+            --primary-color-dark: #1B22CC;
+            --primary-color: #107BCC;
+            --primary-color-muted: #D4F1F4;
+            --first-compliment-color: #CC5A25;
+            --second-compliment-color: #CCAB25;
+            --neighbor-color: #06CCB8;
+            
+        }
+        body {
+            background-color: var(--primary-color);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color-muted);
+        }
+
+        a.btn-primary:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .bi-code-slash {
+            color: #107BCC;
+        }
+
+        a.dropdown-item:hover {
+            background-color: var(--neighbor-color);
+            color: #000;
+        }
+        a.dropdown-item:active {
+            background-color: var(--primary-color-dark);
+            color:#fff;
+        }
+        /*
+        #about {
+            border: .15em solid black;
+            border-radius: 15px;
+        }
+        */
+
+        .project-border {
+            
+            border: .25em solid var(--second-compliment-color);
+        }
+
+        .text-color-first-compliment {
+            color: #CC5A25;
+        }
+
+        .text-color-second-compliment {
+            color: #CCAB25;
+        }
+
+        .text-color-first-neighbor {
+            color: #1B22CC;
+        }
+
+        .text-color-second-neighbor {
+            color: #06CCB8;
+        }
+    </style>
+
 </head>
 
-<body class="bg-light">
+<body class="bg-gradient">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light bg-gradient sticky-top" >
+    <nav class="navbar navbar-expand-md navbar-light bg-light bg-gradient">
         <div class="container-md">
             <div class="navbar-brand">
                 <a href="#intro">
                     <i class="bi bi-code-slash"></i>
                 </a>
-                
+
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        
+
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">                    
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About Me</a>
                     </li>
@@ -64,8 +127,8 @@
 
     <!-- Intro -->
     <div class="container-md text-center" id="intro">
-        <h1 class="display-1">Hello, world!</h1>
-        <p class="lead text-muted">Welcome to my portfolio!</p>
+        <h1 class="display-1">Hello, <span class="text-color-first-compliment">world</span>!</h1>
+        <p class="lead text-white">Welcome to my portfolio!</p>
         <div class="row justify-content-center my-5">
             <div class="col-md-8">
                 <picture>
@@ -75,22 +138,25 @@
                 </picture>
             </div>
         </div>
-        
     </div>
+
     <!-- About Me -->
-    <div class="container-md text-center bg-light" id="about">
+    <div class="container-md text-center bg-light p-5 shadow" id="about">
         <h2 class="display-3">About Me</h2>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fuga inventore fugiat deleniti ad earum quia, corporis sit tempore quasi impedit maxime obcaecati, delectus libero sint molestiae error? Nam, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur <span class="text-color-first-neighbor">adipisicing elit</span>. Amet fuga inventore fugiat deleniti <span class="text-color-first-compliment">ad earum quia</span>,
+            corporis sit tempore quasi <span class="text-color-first-compliment">impedit maxime obcaecati</span>, delectus libero sint <span class="text-color-first-compliment">molestiae error</span>? Nam, commodi.</p>
         <div class="row my-5">
-            <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, obcaecati rem error temporibus quis totam possimus nihil ipsum illum dolorum doloribus. Architecto similique nostrum, iure vero ad nam omnis quod!</p>
-                <ul class="list-group text-start">
-                    <li class="list-group-item">An Item</li>
-                    <li class="list-group-item">A Second Item</li>
-                    <li class="list-group-item">A Third Item</li>
-                    <li class="list-group-item">A Fourth Item</li>
-                    <li class="list-group-item">A Fifth Item</li>
+            <div class="col-md-4 text-center text-md-start">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, obcaecati rem error temporibus
+                    quis totam possimus nihil ipsum illum dolorum doloribus. Architecto similique nostrum, iure vero ad
+                    nam omnis quod!</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">An Item</li>
+                    <li class="list-group-item list-group-item-secondary">A Second Item</li>
+                    <li class="list-group-item list-group-item-success">A Third Item</li>
+                    <li class="list-group-item list-group-item-secondary">A Fourth Item</li>
+                    <li class="list-group-item list-group-item-secondary">A Fifth Item</li>
                 </ul>
             </div>
             <div class="col-md-8 d-none d-md-block">
@@ -102,64 +168,100 @@
             </div>
         </div>
     </div>
+
     <!-- Projects -->
     <div class="container-md text-center my-5" id="projects">
         <h2 class="display-3">Projects</h2>
-        <p class="lead text-muted">Some of my latest work...</p>
+        <p class="lead text-white">Some of my latest work...</p>
 
         <div class="row my-5 justify-content-evenly">
-            <div class="col-md-6 col-xl-4 h-100">
-                <div class="card border-primary border-2">
-                    <div class="img-fluid" style="height:20rem; overflow:hidden">
+            <div class="col-lg-6 col-xxl-4 my-5">
+                <div class="card h-100 project-border shadow">
+                    <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
                         <picture>
                             <source src="images/galaxy_md.jpg" media="(min-width:75em)">
-                            <img src="images/galaxy_sm.jpg" alt="Galaxy" class="card-img-top">
+                            <img src="images/galaxy_sm.jpg" alt="Galaxy" class="card-img-top w-100 h-auto">
                         </picture>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title display-5">2D Space Shooter</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aperiam fugiat doloremque! Ullam sed cum laborum?</p>
-                        <h6 class="display-6">Features:</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aperiam fugiat doloremque!
+                            Ullam sed cum laborum?</p>
+                        <h6 class="display-6"><span class="text-color-first-compliment">Features:</span></h6>
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-secondary">A Feature</li>
                             <li class="list-group-item list-group-item-secondary">A Second Feature</li>
                             <li class="list-group-item list-group-item-secondary">A Third Feature</li>
                             <li class="list-group-item list-group-item-secondary">A Final Feature</li>
                         </ul>
+                    </div>
+                    <div class="card-footer">
+
                         <div class="text-start">
                             <a href="#" class="btn btn-primary align-self-start mt-3">Click Here!</a>
                         </div>
-                        
-                    </div>  
-                </div>                
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="card border-primary border-2">
-                    <div class="img-fluid" style="height:20rem; overflow:hidden">
+
+            <div class="col-lg-6 col-xxl-4 my-5">
+                <div class="card h-100 project-border shadow">
+                    <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
                         <picture>
                             <source src="images/pool_md.jpg" media="(min-width:75em)">
-                            <img src="images/pool_sm.jpg" alt="Galaxy" class="card-img-top">
+                            <img src="images/pool_sm.jpg" alt="Galaxy" class="card-img-top w-100 h-auto">
                         </picture>
                     </div>
-                    
-                    <div class="card-body h-100">
+                    <div class="card-body">
                         <h5 class="card-title display-5">Pool System</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aperiam fugiat doloremque! Ullam sed cum laborum?</p>
-                        <h6 class="display-6">Features:</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aperiam fugiat doloremque!
+                            Ullam sed cum laborum?</p>
+                        <h6 class="display-6"><span class="text-color-first-compliment">Features:</span></h6>
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-secondary">A Feature</li>
                             <li class="list-group-item list-group-item-secondary">A Second Feature</li>
                             <li class="list-group-item list-group-item-secondary">A Third Feature</li>
                             <li class="list-group-item list-group-item-secondary">A Final Feature</li>
                         </ul>
+                    </div>
+                    <div class="card-footer">
+
                         <div class="text-start">
                             <a href="#" class="btn btn-primary align-self-start mt-3">Click Here!</a>
                         </div>
-                    </div>  
+                    </div>
                 </div>
-                
             </div>
-        </div>
+
+            <div class="col-lg-6 col-xxl-4 my-5">
+                <div class="card h-100 project-border shadow">
+                    <div class="img-fluid m-3" style="height:20rem; width:auto; overflow:hidden">
+                        <picture>
+                            <source src="images/pool_md.jpg" media="(min-width:75em)">
+                            <img src="images/pool_sm.jpg" alt="Galaxy" class="card-img-top w-100 h-auto">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title display-5">Pool System</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aperiam fugiat doloremque!
+                            Ullam sed cum laborum?</p>
+                        <h6 class="display-6"><span class="text-color-first-compliment">Features:</span></h6>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-secondary">A Feature</li>
+                            <li class="list-group-item list-group-item-secondary">A Second Feature</li>
+                            <li class="list-group-item list-group-item-secondary">A Third Feature</li>
+                            <li class="list-group-item list-group-item-secondary">A Final Feature</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+
+                        <div class="text-start">
+                            <a href="#" class="btn btn-primary align-self-start mt-3">Click Here!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
     </div>
 
     <!-- Social Media -->
