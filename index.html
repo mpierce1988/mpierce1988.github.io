@@ -89,9 +89,9 @@
 
 </head>
 
-<body class="bg-gradient">
+<body class="bg-gradient" style="position:relative" data-bs-spy="scroll" data-bs-target="#navbar-top">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light bg-gradient mb-5">
+    <nav class="navbar navbar-expand-md navbar-light bg-light bg-gradient mb-5 sticky-top" id="navbar-top">
         <div class="container-md">
             <div class="navbar-brand">
                 <a href="#intro">
@@ -109,7 +109,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About Me</a>
+                        <a href="#about" class="nav-link active">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a href="#projects" class="nav-link">Projects</a>
@@ -142,7 +142,8 @@
     </div>
 
     <!-- About Me -->
-    <div class="container-md text-center bg-light p-5 shadow" id="about">
+    <div id="about"></div>
+    <div class="container-md text-center bg-light p-5 shadow">
         <h2 class="display-3">About Me</h2>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>Lorem ipsum dolor sit amet consectetur <span class="text-color-first-neighbor">adipisicing elit</span>. Amet
@@ -171,9 +172,10 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Projects -->
-    <div class="container-md text-center my-5" id="projects">
+    <div id="projects"></div>
+    <div class="container-md text-center my-5">
         <h2 class="display-3">Projects</h2>
         <p class="lead text-white">Some of my latest work...</p>
 
