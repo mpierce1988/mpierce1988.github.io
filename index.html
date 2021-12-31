@@ -248,7 +248,60 @@
         </div>
 
         <!-- Contact Me -->
+        <div class="container-md my-5" id="contact">
+            <h2 class="display-3">Contact Me</h2>
+            <p class="lead text-white">Send me a message, and I will respond as quickly as I can!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-10 bg-white p-5 shadow">
+                    <form class="text-start">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name:</label>
+                                <input type="text" class="form-control" id="firstName">
 
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name:</label>
+                                <input type="text" class="form-control" id="lastName">
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control">
+                            </div>                            
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="reason" class="form-label">Reason for Contact:</label>
+                                <select name="reason" id="reason" class="form-control">
+                                    <option value="offer">Job Offer</option>
+                                    <option value="networking">Networking</option>
+                                    <option value="social">Social</option>
+                                    <option value="question">Question/Comment</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="comment"></textarea>
+                                    <label for="comment">Comments</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3 justify-content-end">
+                            <div class="col-3">
+                                <input type="submit" value="Submit" class="btn btn-primary">
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- Script -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
