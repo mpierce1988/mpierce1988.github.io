@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "projectName": "Pool System",
+            "projectDescription": "Sample Description",
+            "linkToProjectImage": "images/coding_sm.jpg",
+            "features": [
+                "Feature One",
+                "Feature Two"
+            ],
+            "linkToProject": "https://www.google.com"
+        },
+        {
+            "projectName": "Second Project",
+            "projectDescription": "It's Real Easy to do!",
+            "linkToProjectImage": "images/pool_sm.jpg",
+            "features": [
+                "New Feature One",
+                "Even Newer Feature Two"
+            ],
+            "linkToProject": "https://www.google.com"
+        }
+    ]
+}

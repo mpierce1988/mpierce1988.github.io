@@ -1,11 +1,29 @@
 import Project from './project.js';
+
+//const jsonData = require('./data/data.json');
+
 let features = ['Feature One', 'Feature Two'];
 let project = new Project('Pool System', 'A test of the pool system', '/images/coding_sm.jpg', features, 'www.github.com');
 project.features = ['Feature One', 'Feature Two'];
 
 let project2 = new Project('Swipe and Rescue', 'Help facilitate animal adoptions', 'images/world_sm.jpg', ['Feature One', 'Feature Two'], 'https://www.github.com');
 
-let projectList = [project, project2];
+//let projectList = [project, project2];
+//let projectList = getProjectListFromJson();
+
+function getProjectListFromJson() {
+    let projectList = [];
+
+    let parsedJson = JSON.parse(jsonData);
+    let projectArray = parsedJson.projects;
+
+    projectArray.forEach(projectData => {
+        let project = Project.fromJson(projectData);
+        projectList.push(project);
+    });
+
+    return projectList;
+}
 
 function createProjectCard(project) {
     let projectName = project.projectName; 
@@ -124,11 +142,14 @@ function createProjectCard(project) {
 
 }
 
-function loadProjects() {
+async function loadProjects() {
+    // load projects from json
+    const projectList = await (await fetch('./data/data.json')).json();
+    
     // get div container
     let containerDiv = document.querySelector('.projects-container');
     // for each object in project list array, append a card to this container
-    projectList.forEach((project) => {
+    projectList.projects.forEach((project) => {
         containerDiv.appendChild(createProjectCard(project));
     });
 }

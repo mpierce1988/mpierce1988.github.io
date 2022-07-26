@@ -16,5 +16,14 @@ export default class Project {
         this.linkToProject = linkToProject
     }
 
+    static fromJson(json) {
+        let obj = JSON.parse(json);
+        let project = 
+            new Project(obj.projectName, obj.projectDescription, obj.linkToProjectImage, 
+                obj.features, obj.linkToProject);
+
+        return project;
+    }
+
 
 }
