@@ -1,4 +1,18 @@
 {
+    "aboutMe": {
+        "lead": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "topText": "Lorem ipsum dolor sit amet consectetur <span class=\"text-color-first-neighbor\">adipisicing elit</span>. Amet fuga inventore fugiat deleniti <span class=\"text-color-first-compliment\">ad earum quia</span>, corporis sit tempore quasi <span class=\"text-color-first-compliment\">impedit maxime obcaecati</span>, delectus libero sint <span class=\"text-color-first-compliment\">molestiae error</span>? Nam, commodi.",
+        "bottomText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, obcaecati rem error temporibus quis totam possimus nihil ipsum illum dolorum doloribus. Architecto similique nostrum, iure vero ad nam omnis quod",
+        "items": [
+            "An Item",
+            "A Second Item",
+            "A Third Item",
+            "A Fourth Item",
+            "A Fifth Item"
+        ],
+        "pathToImage": "/images/coding_sm.jpg"
+
+    },
     "projects": [
         {
             "projectName": "Pool System",

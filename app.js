@@ -1,30 +1,56 @@
 import Project from './project.js';
+import AboutMe from './aboutMe.js';
 
 //const jsonData = require('./data/data.json');
 
-let features = ['Feature One', 'Feature Two'];
-let project = new Project('Pool System', 'A test of the pool system', '/images/coding_sm.jpg', features, 'www.github.com');
-project.features = ['Feature One', 'Feature Two'];
+/**
+ * 
+ * @param {AboutMe} aboutMe 
+ */
+function createAboutMe(aboutMe) {
+    // get html elements
+    let leadElement = document.querySelector('#lead-text');
+    let topTextElement = document.querySelector('#top-text');
+    let bottomTextElement = document.querySelector('#bottom-text');
+    let listGroupElement = document.querySelector('#items');
+    let imageElement = document.querySelector('#about-me-image');
 
-let project2 = new Project('Swipe and Rescue', 'Help facilitate animal adoptions', 'images/world_sm.jpg', ['Feature One', 'Feature Two'], 'https://www.github.com');
+    // clear and set lead text
+    leadElement.innerHTML = '';
+    leadElement.innerHTML = aboutMe.lead;
 
-//let projectList = [project, project2];
-//let projectList = getProjectListFromJson();
+    // clear and set top text
+    topTextElement.innerHTML = '';
+    topTextElement.innerHTML = aboutMe.topText;
 
-function getProjectListFromJson() {
-    let projectList = [];
+    // clear and set bottom text
+    bottomTextElement.innerHTML = '';
+    bottomTextElement.innerHTML = aboutMe.bottomText;
 
-    let parsedJson = JSON.parse(jsonData);
-    let projectArray = parsedJson.projects;
+    // clear and loop through items and create li
+    listGroupElement.innerHTML = '';
 
-    projectArray.forEach(projectData => {
-        let project = Project.fromJson(projectData);
-        projectList.push(project);
+    aboutMe.items.forEach(item => {
+        // create li element
+        let li = document.createElement('li');
+        // add styling classes
+        li.classList.add("list-group-item", "list-group-item-primary");
+        // add text
+        li.innerHTML = item;
+        // append to ul
+        listGroupElement.appendChild(li);
     });
 
-    return projectList;
+    // set about me image
+    imageElement.src = aboutMe.pathToImage;
 }
 
+
+/**
+ * @description Creates a Project Card out of a Project object
+ * @param {Project} project 
+ * @returns 
+ */
 function createProjectCard(project) {
     let projectName = project.projectName; 
     let projectDescription = project.projectDescription;
@@ -144,14 +170,29 @@ function createProjectCard(project) {
 
 async function loadProjects() {
     // load projects from json
-    const projectList = await (await fetch('./data/data.json')).json();
+    const jsonData = await (await fetch('./data/data.json')).json();
     
     // get div container
     let containerDiv = document.querySelector('.projects-container');
     // for each object in project list array, append a card to this container
-    projectList.projects.forEach((project) => {
+    jsonData.projects.forEach((project) => {
         containerDiv.appendChild(createProjectCard(project));
     });
 }
 
+async function loadAboutMe(){
+    // load about me from JSON
+    const jsonData = await (await fetch('./data/data.json')).json();
+
+    console.log(jsonData.aboutMe);
+    // parse json into AboutMe object
+    let aboutMe = AboutMe.fromJson(jsonData.aboutMe);
+
+    // create about me section
+    createAboutMe(aboutMe);
+}
+
+// run on start
+
+loadAboutMe();
 loadProjects();
