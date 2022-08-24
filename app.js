@@ -192,6 +192,9 @@ async function loadAboutMe(){
     createAboutMe(aboutMe);
 }
 
+
+
+
 // run on start
 
 loadAboutMe();

@@ -1,38 +1,54 @@
 {
     "aboutMe": {
-        "lead": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "topText": "Lorem ipsum dolor sit amet consectetur <span class=\"text-color-first-neighbor\">adipisicing elit</span>. Amet fuga inventore fugiat deleniti <span class=\"text-color-first-compliment\">ad earum quia</span>, corporis sit tempore quasi <span class=\"text-color-first-compliment\">impedit maxime obcaecati</span>, delectus libero sint <span class=\"text-color-first-compliment\">molestiae error</span>? Nam, commodi.",
-        "bottomText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, obcaecati rem error temporibus quis totam possimus nihil ipsum illum dolorum doloribus. Architecto similique nostrum, iure vero ad nam omnis quod",
+        "lead": "<span class='text-color-first-neighbor'>Making</span> and <span class='text-color-first-compliment'>breaking</span> computers since the 90's.",
+        "topText": "Hi, my name is Michael Pierce. I am a <span class='text-color-first-compliment'>lifelong learner</span> and a <span class='text-color-first-neighbor'>tech tinkerer</span>, ever since my family's first Windows 3.1 computer. Since then, I have pursued a variety of digital hobbies, from video editing to audio production to video games. Through these hobbies, I have learned how to learn. I know how to teach myself from online and text resources, and how to teach others.",
+        "bottomText": "While I was pursuing game development as a hobby, I fell in love with programming. This is why I decided to go back to school at New Brunswick Community College for <a href='https://nbcc.ca/programs-courses/program-details?baseCurriculumId=a3dc93ce-e29b-49e5-bf3c-d5374530e205'>Web and Mobile Application Development</a>. Between my education and my personal projects, I have experience with the following:",
         "items": [
-            "An Item",
-            "A Second Item",
-            "A Third Item",
-            "A Fourth Item",
-            "A Fifth Item"
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "SQL",
+            "NoSQL(Firebase)",
+            "C#",
+            "Java",
+            "ASP.NET",
+            "Flutter(Dart)",
+            "Selenium",
+            "Object Oriented Analysis & Design",
+            "Relational Database Design",
+            "Visual Paradigm Studio",
+            "Figma"
         ],
         "pathToImage": "/images/coding_sm.jpg"
 
     },
     "projects": [
         {
-            "projectName": "Pool System",
-            "projectDescription": "Sample Description",
+            "projectName": "Swipe and Rescue",
+            "projectDescription": "A Flutter application that allows users to view available animals for adoption. Shelter staff have access to a special Admin panel that allows them to add, remove, or modify any listed animals.",
             "linkToProjectImage": "images/coding_sm.jpg",
             "features": [
-                "Feature One",
-                "Feature Two"
+                "Android, iOS, and Web supported via Flutter framework",
+                "Provider pattern using the Provider Flutter package",
+                "Responsive UI that supports phone, tablet, and desktop",
+                "User Authentication via Google, Email/Password, or Anonymous via Firebase",
+                "NoSQL database via Firebase Firestore",
+                "Uploadable images are stored to Google Cloud"
             ],
-            "linkToProject": "https://www.google.com"
+            "linkToProject": "https://github.com/mpierce1988/SwipeAndRescue"
         },
         {
-            "projectName": "Second Project",
-            "projectDescription": "It's Real Easy to do!",
+            "projectName": "Hotel Booking App",
+            "projectDescription": "A small Windows Forms app to demonstrate CRUD features. This project was done collaboratively with a small team.",
             "linkToProjectImage": "images/pool_sm.jpg",
             "features": [
-                "New Feature One",
-                "Even Newer Feature Two"
+                "Create, update, and delete booking agents, hotels, rooms, guest profiles, and bookings",
+                "Implimented business rules via SQL constraints and validation",
+                "Team effort completed completely WFH",
+                "Git used to merge contributions and version control"
             ],
-            "linkToProject": "https://www.google.com"
+            "linkToProject": "https://github.com/mpierce1988/DataDrivenApplicationGroupOne"
         }
     ]
 }
